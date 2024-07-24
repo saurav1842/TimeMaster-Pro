@@ -1,0 +1,255 @@
+/* Resetting CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/* Fonts */
+@font-face {
+  font-family: "Bauhaus Hv BT";
+  src: url("./fonts/BauhausHeavyBT.ttf");
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3d087b;
+  background: #3d087b;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  max-width: 1150px;
+  margin: 2em auto;
+}
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.gap {
+  column-gap: 16px;
+}
+.aic {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+.jcse {
+  justify-content: space-evenly;
+}
+.jcsb {
+  justify-content: space-between;
+}
+
+/* Card design */
+.card {
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+.card p {
+  color: #3d087b;
+  font-size: 1.5em;
+}
+
+/* Clock Timer */
+.timer {
+  position: relative;
+}
+.timecard {
+  background: #fff;
+  max-width: 536px;
+  height: 130px;
+}
+.timecard p {
+  font-weight: 700;
+}
+.hour,
+.minute,
+.seconds {
+  background: url(./images/timeline.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 4px 18px;
+  text-align: center;
+  margin: 0 5px;
+}
+.am {
+  background: url(./images/AM_svg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px;
+}
+
+.time div p:first-child {
+  color: #8a11bf;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.card div p:nth-child(2) {
+  color: #5f0089;
+  font-weight: 500;
+}
+.am p {
+  color: #fff !important;
+}
+
+/* Clock timer Background cards */
+.background1,
+.background2 {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.background1 {
+  opacity: 71%;
+  z-index: -1;
+  top: 15px;
+  left: 60px;
+  width: 416px;
+}
+.background2 {
+  opacity: 22%;
+  z-index: -2;
+  top: 30px;
+  left: 80px;
+  width: 379px;
+}
+
+/* Clock timer message */
+.clock-message {
+  background: #fff;
+  margin-top: 40px;
+  text-align: center;
+}
+.clock-message h1 {
+  font-family: "Bauhaus Hv BT", sans-serif;
+  color: #8e53f0;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+/* clock timer image */
+.clock-image {
+  margin-top: 15px;
+}
+/* Clock time input form */
+.clock-form {
+  background: #fff;
+  max-width: 566px;
+  margin-top: 38px;
+}
+.form-inner {
+  position: relative;
+}
+.form-inner:nth-child(-n + 3) {
+  margin: 0 0 52px 0;
+}
+.form-inner:nth-child(-n + 3)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 33px;
+  border-left: 2px solid #c2c2c2;
+  top: 55px;
+  left: 15px;
+}
+/* form Selection */
+select {
+  color: #3d087bde;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  width: 281px;
+  height: 45px;
+  letter-spacing: 0.25px;
+  padding-left: 10px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  margin-left: auto;
+}
+label {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-left: 25px;
+}
+
+/* Form message */
+.form-message {
+  background-color: #694099;
+  border: none;
+  margin-top: 1.1em;
+}
+.form-message h1 {
+  font-family: "Bauhaus Hv BT", sans-serif;
+  color: #ffffff;
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 2px 0;
+}
+.form-bottom {
+  margin-top: 11px;
+}
+
+/* Form Button */
+.btn {
+  padding: 10px 90px;
+  background: transparent
+    linear-gradient(113deg, #6e54ec 0%, #cb52f8 40%, #fc5eff 81%, #f1a7c5 100%);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin: 11px 10px 0 0;
+  cursor: pointer;
+}
+.btn:hover {
+  background: transparent
+    linear-gradient(280deg, #6e54ec 0%, #cb52f8 40%, #fc5eff 81%, #f1a7c5 100%);
+  padding: 10px 85px;
+}
+
+/* form time stats */
+.time-stats {
+  border: none;
+  background-color: #694099;
+  max-width: 100%;
+  margin: 0 0 0 auto;
+}
+.time-stats p {
+  font-size: 1.1em;
+  color: #f25cfe;
+  margin-bottom: 5px;
+}
+
+/* responsive CSS */
+@media only screen and (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+  }
+}
+/* for mobile view Pending*/
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  select {
+    width: 140px;
+  }
+}
